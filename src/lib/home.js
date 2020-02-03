@@ -9,7 +9,7 @@ function showHome(user) {
       <button id="homeMuro"class="btn-naranjo">HOME</button>
       <button id="perfilUsuario" >fotoUsuario</button>
       <br>
-      <h1>SPARROW PLAYER</h1>
+      <h1>SPARROW PLAYER TRALALALALALALAL</h1>
       
       <button id="homeMuro">HOME</button>
       <!-------------- Buscador -------------->
