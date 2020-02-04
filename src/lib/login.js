@@ -36,7 +36,7 @@ function showLogIn() {
                                 Iniciar sesión con:
                             </li>
                             <li>
-                                <a href="" id="btnGmail" ><i class="fab fa-google-plus"></i><img src="../img/icon-gmail.png" class="small-icon" alt=""></a>
+                                <a href="" id="btnGmail" ><img src="../img/icon-gmail.png" class="small-icon" alt=""></a>
                             </li>
                             <li>
                                 <a href="" id="btnFace"><img src="../img/icon-fb.png" class="small-icon" alt=""></a>
@@ -44,7 +44,10 @@ function showLogIn() {
                         </ul>
                     </div>
                     <div class="fila">
-                        <button id="registerMe" class="btn-naranjo">REGISTRATE</button>
+
+                         <button id="registerMe" class="btn-naranjo">REGISTRATE</button>
+
+            
                     </div>
                 </div>
             </div>

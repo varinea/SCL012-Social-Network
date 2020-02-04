@@ -4,8 +4,9 @@ function showHome(user) {
     window.location.hash = '/home';
     // eslint-disable-next-line no-undef
     root.innerHTML = `
+    <header>
       <h1>SP</h1>
-      <br>
+    </header>
       <button id="homeMuro"class="btn-naranjo">HOME</button>
       <button id="perfilUsuario" >fotoUsuario</button>
       <br>
@@ -134,18 +135,10 @@ function showHome(user) {
         <h2 id="tittle">${doc.data().Titulo} </h2> 
         <textarea id="text">${doc.data().Texto}</textarea>
         <button id="postDeleted"${doc.id}> Borrar </button>
-        <button id="postEditUs" ${doc.id},${doc.data().Titulo},${doc.data().Texto}> Editar </button>
         <button id="likePost"> Me gusta <i class="fa fa-heart" aria-hidden="true"></i></button>`
         document.getElementById('postDeleted').addEventListener('click', () => {
           postDeleted(doc.id);
         });
-
-        // <!-------------- Boton Borrar POST -------------->
-       ` <button id="postDeleted" ${doc.id}> Borrar </button>
-      
-        <button id="postEditUs" ${doc.id},${doc.data().Titulo},${doc.data().Texto}> Editar </button>
-        <button id="likePost"> Me gusta </button>
-        `;
 
 
         document.getElementById('likePost').addEventListener('click', () => {

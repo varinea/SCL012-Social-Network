@@ -6,18 +6,19 @@
     box-sizing: border-box;
 }
 /* RESET */
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h5, p{
     margin: 0 0 10px 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 body{
     background-color: #000;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;   
 }
 
-/* BUSCADOR VARINEA */
+/* BUSCADOR VARINEA 
 .searchClass {   
     font-size: 16px;
     font-weight: 500;
@@ -36,7 +37,7 @@ body{
       -webkit-appearance: none;
       background-color: #fff;
      
-  }
+  } */
 
 button{
   
@@ -47,9 +48,12 @@ button{
     justify-content: center;
     flex-direction: column;
     flex-flow: column nowrap;
+    width: 0;
     }
 
- 
+    .registerMe {
+        margin-left: 450px;
+    }
 
 h4{
     color: white;
@@ -57,12 +61,29 @@ h4{
     flex-direction: column;
    flex-flow: column nowrap;
    max-width: 1000px;
-   margin-left: 100px;
+   margin-left: 400px;
    margin-right: 100px;
    padding-left: 220px;
    padding-right: 200px;
    width: 680px;
    height: 20px;
+}
+.from{
+    margin-left: 450px;
+    margin-right: 800px;
+    border-left-width: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 50px;
+}
+
+
+input[type="radio"] {
+    margin-left: 300px;
+    margin-top: 30px;
+    border-top-width: 30px;
+    padding-top: 20%;
+
 }
 .box-flex{
  display: flex;
@@ -93,12 +114,21 @@ h4{
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    align: middle;
 }
 img.full {
-    width: 70%;
+    width: 50%;
+    margin-left: 300px;
 }
 input, button{
-    width: 100%;
+    width: 30%;
+    margin-left: 450px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    border-radius: 50px;
+    border: none;
 }
 .input-blanco{
     background-color: #fff;
@@ -108,19 +138,32 @@ input, button{
     box-sizing: border-box;
     min-height: 20px;
     padding-left: 5px;
-    margin-left: 200px;
+    margin-left: 450px;
     margin-right: 200px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
-
+.button#logIn {
+    margin-left: 450px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    border-radius: 50px;
+    border: none;
+}
+a#recoverBtn {
+    margin-left: 530px;
+    margin-top: 10px;
+}
 .btn-naranjo{
     background-color: #ff6600;
     border-radius: 50px;
     border: none;
-    padding: 10px 5px;
+    padding: 5px 5px;
     box-sizing: border-box;
     min-height: 20px; 
     color: #fff;
+    
 }
 .recordar-pass{
     color: #fff;
@@ -150,7 +193,3 @@ ul.inicio-icons li{
     }
 }
  
-
-
-    
-
