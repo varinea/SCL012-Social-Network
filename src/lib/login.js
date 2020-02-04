@@ -1,8 +1,9 @@
-import * as auth from '/lib/loginGmail.js'
+import * as auth from '/lib/loginGmail.js';
 //  Función que crea la pagina de inicio
 function showLogIn() {
-    window.location.hash = '/login';
-    root.innerHTML = `
+  window.location.hash = '/login';
+  root.innerHTML = `
+  <div class="sparrowContainer">
   <section>
   <div class="box-flex">
       <div class="col-login">
@@ -16,7 +17,7 @@ function showLogIn() {
               <input id="password" type="password" class="input-blanco" placeholder="Ingresa tu contraseña" required>
           </div>
           <div class="fila">
-              <button id="logIn" class="btn-naranjo">INICIAR SESIÓN</button>
+              <button id="logIn" class="fila">INICIAR SESIÓN</button>
               
           </div>
           <div>
@@ -41,56 +42,54 @@ function showLogIn() {
                             <li>
                                 <a href="" id="btnFace"><img src="../img/icon-fb.png" class="small-icon" alt=""></a>
                             </li>
+                            <li>
+                                <a href="" id="btnFace"><img src="../img/icon-fb.png" class="small-icon" alt=""></a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="fila">
-
-                         <button id="registerMe" class="btn-naranjo">REGISTRATE</button>
-
-            
-                    </div>
+                         <button id="registerMe" class="fila">REGISTRATE</button>
                 </div>
             </div>
-        </section>`
+        </section>
+        </div>
+        `;
 
-    document.getElementById('btnGmail').addEventListener('click', () => {
-        console.log('click');
-        auth.authFire();
-    });
-    document.getElementById('btnFace').addEventListener('click', () => {
-        auth.authFacebook();
-    });
+  document.getElementById('btnGmail').addEventListener('click', () => {
+    console.log('click');
+    auth.authFire();
+  });
+  document.getElementById('btnFace').addEventListener('click', () => {
+    auth.authFacebook();
+  });
 }
 // función que realiza el incio de sesión en firebase
 function logIn(email, password) {
-    firebase.auth().signInWithEmailAndPassword(email, password)
+  firebase.auth().signInWithEmailAndPassword(email, password)
 
-        .catch(function (error) {
-            // Handle Errors here.
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            alert('Debe Ingresar su correo electrónico y Contraseña')
-            // ...
-            console.log(errorCode);
-            console.log(errorMessage); s
-        });
-
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert('Debe Ingresar su correo electrónico y Contraseña');
+      // ...
+      console.log(errorCode);
+      console.log(errorMessage); s;
+    });
 }
 
 
 // Recuperación de contraseña
-let recoverPass = function () { // para invocar a la funcion de firebase
-    let auth = firebase.auth();
-    let emailAddress = document.getElementById('email').value; //para recuperar valor email
-    console.log("EMAIL:", emailAddress);
-    auth.sendPasswordResetEmail(emailAddress)//metodo para recuperacion de correo
-        .then(function () { //notificar cuando se envio el correo
-            alert('Se ha enviado un correo a tu cuenta. Porfavor sigue las intrucciones')
+const recoverPass = function() { // para invocar a la funcion de firebase
+  const auth = firebase.auth();
+  const emailAddress = document.getElementById('email').value; // para recuperar valor email
+  console.log('EMAIL:', emailAddress);
+  auth.sendPasswordResetEmail(emailAddress)// metodo para recuperacion de correo
+    .then(() => { // notificar cuando se envio el correo
+      alert('Se ha enviado un correo a tu cuenta. Porfavor sigue las intrucciones');
+    }, (error) => { // funcion anonima para manejar errores
+      console.log(error);
+    });
+};
 
-        }, function (error) { // funcion anonima para manejar errores
-            console.log(error)
-        })
-}
 
-
-export { showLogIn, logIn, recoverPass }
+export { showLogIn, logIn, recoverPass };

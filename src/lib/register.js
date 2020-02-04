@@ -3,18 +3,21 @@
 function registerMe() {
   window.location.hash = '/register';
   const root = document.getElementById('root');
-  root.innerHTML = `<h4>Crear Cuenta</h4>
-    <input id="name" placeholder="Nombre y Apellido">
-    <input id="date" type="date" placeholder="Fecha de Nacimiento">
+  root.innerHTML = `
+  <div class="sparrowContainer">
+    <h1>Crear Cuenta</h1>
+    <input class="input-home" id="name" placeholder="Nombre y Apellido">
+    <input class="input-home" id="date" type="date" placeholder="Fecha de Nacimiento">
     <form>
-    <input type="radio" name="gender" value="male" > Masculino
-    <input type="radio" name="gender" value="female"> Femenino
-    <input type="radio" name="gender" value="other"> Otro
+    <input class="input-home" type="radio" name="gender" value="male" > Masculino
+    <input class="input-home" type="radio" name="gender" value="female"> Femenino
+    <input class="input-home" type="radio" name="gender" value="other"> Otro
     </form>
-    <input id="registerEmail" type="email" placeholder="Ingresa tu Email">
-    <p>Tu contraseña debe tener un mínimo de 6 caracteres númericos</p>
-    <input id="registerPassword" type="password" placeholder="Ingresa tu contraseña">
-    <button id="btnRegisterMe">Registrarme</button>
+    <input class="input-home" id="registerEmail" type="email" placeholder="Ingresa tu Email">
+    <h2>Tu contraseña debe tener un mínimo de 6 caracteres númericos</h2>
+    <input class="input-home" id="registerPassword" type="password" placeholder="Ingresa tu contraseña">
+    <button class="sparrowContainer" id="btnRegisterMe">Registrarme</button>
+    </div> 
   `;
   document.getElementById('btnRegisterMe').addEventListener('click', register);
 }
